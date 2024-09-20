@@ -49,18 +49,16 @@ jobs:
           cd ./${{ matrix.subproject }}
           npm install
           npm run build
-          ls -a
 
       - name: Move build to dist directory
         run: |
-          ls -a
-          mkdir -p ../dist/${{ matrix.subproject }}
-          mv dist/* ../dist/${{ matrix.subproject }}/
+          mkdir -p ./dist/${{ matrix.subproject }}
+          mv ./${{ matrix.subproject }}/dist/* ./dist/${{ matrix.subproject }}/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '../dist'
+          path: './dist'
 
       - name: Deploy to GitHub Pages
         id: deployment
