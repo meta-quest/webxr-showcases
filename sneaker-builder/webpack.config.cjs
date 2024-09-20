@@ -1,3 +1,4 @@
+/* eslint-env node */
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
@@ -37,7 +38,7 @@ module.exports = {
 		new ESLintPlugin({
 			extensions: ['js'],
 			eslintPath: require.resolve('eslint'),
-			overrideConfigFile: path.resolve(__dirname, '../eslint.config.cjs'),
+			overrideConfigFile: path.resolve(__dirname, '../.eslintrc.cjs'),
 		}),
 		new HtmlWebpackPlugin({
 			template: './src/index.html',
