@@ -49,9 +49,11 @@ jobs:
           cd ./${{ matrix.subproject }}
           npm install
           npm run build
+          ls -a
 
       - name: Move build to dist directory
         run: |
+          ls -a
           mkdir -p ../dist/${{ matrix.subproject }}
           mv dist/* ../dist/${{ matrix.subproject }}/
 
