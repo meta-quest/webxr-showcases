@@ -1,0 +1,34 @@
+{
+	"name": "sneaker-builder",
+	"private": true,
+	"devDependencies": {
+		"@gltf-transform/cli": "^3.5.0",
+		"@gltf-transform/core": "^3.5.0",
+		"@gltf-transform/extensions": "^3.5.0",
+		"@gltf-transform/functions": "^3.5.0",
+		"copy-webpack-plugin": "^11.0.0",
+		"css-loader": "^5.2.1",
+		"draco3dgltf": "^1.5.6",
+		"html-webpack-plugin": "^5.3.1",
+		"sharp": "^0.32.4",
+		"style-loader": "^2.0.0",
+		"webpack": "^5.33.2",
+		"webpack-cli": "^4.6.0",
+		"webpack-dev-server": "^4.11.1"
+	},
+	"scripts": {
+		"build": "webpack",
+		"serve": "webpack serve",
+		"lint": "eslint ./src",
+		"format": "prettier --write ./src/**/*"
+	},
+	"dependencies": {
+		"elics": "^0.1.2",
+		"gamepad-wrapper": "^1.2.0",
+		"howler": "^2.2.3",
+		"ratk": "^0.2.1",
+		"three": "npm:super-three@0.158.0",
+		"three-mesh-bvh": "^0.6.7",
+		"troika-three-text": "^0.48.0"
+	}
+}
