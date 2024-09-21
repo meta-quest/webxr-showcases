@@ -30,8 +30,6 @@ jobs:
     strategy:
       matrix:
         node-version: [20.x]
-        # List the subprojects here
-        subproject: ['sneaker-builder', 'flap-frenzy']
 
     steps:
       - uses: actions/checkout@v4
@@ -44,16 +42,27 @@ jobs:
       - name: Install root dependencies
         run: npm install
 
-      - name: Build subproject - ${{ matrix.subproject }}
+      - name: Build subproject - sneaker-builder
         run: |
-          cd ./${{ matrix.subproject }}
+          cd ./sneaker-builder
           npm install
           npm run build
 
       - name: Move build to dist directory
         run: |
-          mkdir -p ./dist/${{ matrix.subproject }}
-          mv ./${{ matrix.subproject }}/dist/* ./dist/${{ matrix.subproject }}/
+          mkdir -p ./dist/sneaker-builder
+          mv ./sneaker-builder/dist/* ./dist/sneaker-builder/
+
+      - name: Build subproject - flap-frenzy
+        run: |
+          cd ./flap-frenzy
+          npm install
+          npm run build
+
+      - name: Move build to dist directory
+        run: |
+          mkdir -p ./dist/flap-frenzy
+          mv ./flap-frenzy/dist/* ./dist/flap-frenzy/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
