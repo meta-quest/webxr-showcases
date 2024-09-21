@@ -31,7 +31,7 @@ jobs:
       matrix:
         node-version: [20.x]
         # List the subprojects here
-        subproject: ['sneaker-builder']
+        subproject: ['sneaker-builder', 'flap-frenzy']
 
     steps:
       - uses: actions/checkout@v4
