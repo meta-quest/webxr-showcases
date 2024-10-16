@@ -1,0 +1,169 @@
+/*
+  Copyright (c) Meta Platforms, Inc. and affiliates.
+
+  This source code is licensed under the MIT license found in the
+  LICENSE file in the root directory of this source tree.
+*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+.root {
+	display: flex;
+	flex-direction: row;
+}
+
+#scene-container {
+	display: flex;
+	height: 100vh;
+	width: 500px;
+	flex: 1 1;
+	overflow: hidden;
+}
+
+#config-panel {
+	font-family: 'Roboto', sans-serif;
+	display: flex;
+	min-width: 400px;
+	flex: 0 0;
+	flex-direction: column;
+	padding: 40px;
+}
+
+@media only screen and (max-width: 830px) {
+	.root {
+		flex-direction: column;
+		height: 100vh;
+	}
+
+	#scene-container {
+		width: 100vw;
+		height: unset;
+		min-height: 300px;
+	}
+
+	#config-panel {
+		width: 100vw;
+		flex-direction: column;
+		padding: 20px;
+		min-width: unset;
+	}
+}
+
+.headline {
+	font-size: 16px;
+	color: rgb(153, 46, 0);
+	font-weight: 500;
+}
+
+.product-title {
+	font-size: 24px;
+	color: rgb(17, 17, 17);
+	font-weight: 400;
+	margin-bottom: 15px;
+}
+
+.product-subtitle {
+	font-size: 16px;
+	color: rgb(17, 17, 17);
+	font-weight: 500;
+}
+
+.config-title {
+	font-size: 16px;
+	color: rgb(17, 17, 17);
+	font-weight: 500;
+}
+
+.gender-options {
+	margin: 10px 0px 20px 0px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.gender-options > button {
+	font-size: 16px;
+	border: 1px solid rgb(229, 229, 229);
+	background-color: rgba(0, 0, 0, 0);
+	color: rgb(17, 17, 17);
+	padding: 4px;
+	height: 36px;
+	font-weight: 400;
+	border-radius: 4px;
+	display: flex;
+	vertical-align: middle;
+	justify-content: center;
+	width: calc(50% - 2px);
+}
+
+.gender-options > button:hover,
+.prefabs > button.selected {
+	border-color: rgb(17, 17, 17);
+}
+
+.gender-options > button.selected {
+	background-color: rgb(17, 17, 17);
+	color: rgb(255, 255, 255);
+}
+
+.prefabs {
+	margin: 10px 0px 20px 0px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.prefabs > button {
+	padding: 0;
+	background-color: #f5f5f5;
+}
+
+.prefabs img {
+	width: 75px;
+	height: 75px;
+}
+
+.size-options {
+	margin-top: 10px;
+	display: flex;
+	flex-direction: column;
+}
+
+.size-row {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-bottom: 4px;
+}
+
+.size-options button {
+	font-size: 16px;
+	border: 1px solid rgb(229, 229, 229);
+	background-color: rgba(0, 0, 0, 0);
+	color: rgb(17, 17, 17);
+	height: 48px;
+	font-weight: 400;
+	border-radius: 4px;
+	display: flex;
+	vertical-align: middle;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	width: calc(20% - 3.2px);
+}
+
+.size-options button:hover,
+.size-options button.selected {
+	border-color: rgb(17, 17, 17);
+}
+
+.customize-button {
+	margin-top: 30px;
+	padding: 18px 24px;
+	background-color: rgba(0, 0, 0, 0);
+	border: 1.5px solid rgb(202, 202, 203);
+	border-radius: 30px;
+}
+
+.customize-button:hover {
+	border-color: rgb(17, 17, 17);
+}

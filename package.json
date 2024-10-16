@@ -1,0 +1,17 @@
+{
+	"devDependencies": {
+		"eslint": "8.56.0",
+		"eslint-config-prettier": "^8.2.0",
+		"eslint-plugin-prettier": "^5.1.2",
+		"eslint-webpack-plugin": "^2.5.3",
+		"prettier": "^3.3.3",
+		"pre-commit": "^1.2.2"
+	},
+	"scripts": {
+		"lint": "eslint \"**/src/**/*.{js,ts,tsx}\"",
+		"format": "prettier --write \"**/src/**/*.{js,ts,tsx,css,scss,json,md}\""
+	},
+	"pre-commit": [
+		"lint"
+	]
+}
