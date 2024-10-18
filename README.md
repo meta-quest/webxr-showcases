@@ -5,7 +5,10 @@ This repository hosts a collection of open source WebXR showcase experiences dev
 ## Showcases
 
 - [**Sneaker Builder**](https://meta-quest.github.io/webxr-showcases/sneaker-builder)  
-   An interactive Mixed Reality experience where users can hold, inspect, customize, and check the sizes when shopping for sneakers virtually in their own environment.
+  An interactive Mixed Reality experience where users can hold, inspect, customize, and check the sizes when shopping for sneakers virtually in their own environment.
+
+- [**Chairs Etc**](https://meta-quest.github.io/webxr-showcases/chairs-etc)
+  An interactive Mixed Reality experience envisioning what the future of furniture shopping could look like on the spatial web. You can seemlessly place, rotate and drag virtual chairs in your physical environment in this experience.
 
 - [**Flap Frenzy**](https://meta-quest.github.io/webxr-showcases/flap-frenzy)  
   An immersive VR game where players navigate their character through a series of shrinking target rings by physically flapping their arms and adopting different poses.

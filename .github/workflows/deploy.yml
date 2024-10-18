@@ -64,6 +64,17 @@ jobs:
           mkdir -p ./dist/flap-frenzy
           mv ./flap-frenzy/dist/* ./dist/flap-frenzy/
 
+      - name: Build subproject - chairs-etc
+        run: |
+          cd ./chairs-etc
+          npm install
+          npm run build
+
+      - name: Move build to dist directory
+        run: |
+          mkdir -p ./dist/chairs-etc
+          mv ./chairs-etc/dist/* ./dist/chairs-etc/
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
