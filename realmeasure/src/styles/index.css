@@ -1,0 +1,71 @@
+/*
+  Copyright (c) Meta Platforms, Inc. and affiliates.
+
+  This source code is licensed under the MIT license found in the
+  LICENSE file in the root directory of this source tree.
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+#ui-panel {
+	position: fixed;
+	bottom: 0;
+	border-radius: 0;
+	color: white;
+	background: linear-gradient(to right, #9d8582, #4a576c);
+	font-family: 'Inter', sans-serif;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+#ui-panel h1 {
+	font-size: 80px;
+	font-weight: 600;
+	color: #ffffff;
+	margin-bottom: 0;
+}
+
+#ui-panel p {
+	max-width: 800px;
+	font-size: 36px;
+	font-weight: 400;
+	text-align: center;
+	color: #d9d9d9;
+}
+
+.action-button {
+	font-size: 80px;
+	padding: 10px 20px;
+	font-family: 'Inter', sans-serif;
+	color: #d9d9d9;
+	background-color: transparent;
+	border: 4px solid #d9d9d9;
+	transition: all 0.2s ease-in-out;
+}
+
+.action-button:hover {
+	color: #ffffff;
+	border: 4px solid #ffffff;
+	transform: translate(5px, -5px);
+	box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (max-width: 600px) {
+	#ui-panel h1 {
+		font-size: 50px;
+	}
+
+	#ui-panel p {
+		max-width: 80vw;
+		font-size: 24px;
+	}
+
+	.action-button {
+		font-size: 50px;
+		padding: 6px 12px;
+	}
+}
