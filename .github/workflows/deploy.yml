@@ -53,6 +53,17 @@ jobs:
           mkdir -p ./dist/sneaker-builder
           mv ./sneaker-builder/dist/* ./dist/sneaker-builder/
 
+      - name: Build subproject - realmeasure
+        run: |
+          cd ./realmeasure
+          npm install
+          npm run build
+
+      - name: Move build to dist directory
+        run: |
+          mkdir -p ./dist/realmeasure
+          mv ./realmeasure/dist/* ./dist/realmeasure/
+
       - name: Build subproject - flap-frenzy
         run: |
           cd ./flap-frenzy
