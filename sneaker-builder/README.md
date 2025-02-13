@@ -39,3 +39,21 @@ npm run serve
 ```
 
 After running the command, your development server will be available at [localhost:8081](http://localhost:8081).
+
+### Using Docker
+
+To start the project using Docker, follow these steps:
+
+1. Build the Docker image:
+
+```bash
+docker build -t sneaker-builder .
+```
+
+2. Run the Docker container:
+
+```bash
+docker run -p 8081:8081 sneaker-builder
+```
+
+After running the command, your development server will be available at [localhost:8081](http://localhost:8081).
