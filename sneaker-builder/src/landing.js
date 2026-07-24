@@ -26,7 +26,7 @@ export class InlineSystem extends System {
 		const webLaunchButton = document.getElementById('web-launch-button');
 		webLaunchButton.style.display = 'none';
 		ARButton.convertToARButton(arButton, renderer, {
-			ENTER_XR_TEXT: 'Customize in MR',
+			ENTER_XR_TEXT: 'Customize in AR',
 			requiredFeatures: [
 				'hit-test',
 				'plane-detection',
