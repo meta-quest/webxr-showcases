@@ -15,6 +15,11 @@ import {
 	Vector3,
 } from 'three';
 import { POINTER_MODE, PlayerComponent } from './player';
+import {
+	SIZING_PANEL_OFFSET_Z,
+	SIZING_PANEL_WIDTH,
+	getSurfaceRotationY,
+} from './sizeLayout.mjs';
 
 import { GlobalComponent } from './global';
 import { GrabComponent } from './grab';
@@ -51,7 +56,7 @@ const SIZING_PANEL_TEXTURE = new TextureLoader().load(
 	'assets/sizing_panel.png',
 );
 SIZING_PANEL_TEXTURE.colorSpace = SRGBColorSpace;
-const SIZING_PANEL_GEOMETRY = new PlaneGeometry(0.1, 0.25);
+const SIZING_PANEL_GEOMETRY = new PlaneGeometry(SIZING_PANEL_WIDTH, 0.25);
 SIZING_PANEL_GEOMETRY.rotateX(-Math.PI / 2);
 const SIZING_PANEL_MATERIAL = new MeshBasicMaterial({
 	map: SIZING_PANEL_TEXTURE,
@@ -103,7 +108,7 @@ export class SizingSystem extends System {
 					SIZING_PANEL_MATERIAL,
 				);
 				object.userData.sizingPanel.rotateY(-Math.PI / 2);
-				object.userData.sizingPanel.position.z = 0.15;
+				object.userData.sizingPanel.position.z = SIZING_PANEL_OFFSET_Z;
 				object.add(object.userData.sizingPanel);
 				object.userData.sizingPanel.visible = false;
 
@@ -148,9 +153,7 @@ export class SizingSystem extends System {
 					player.head.getWorldDirection(this._vec3);
 					this._vec3.y = 0;
 					object.lookAt(this._vec3.add(object.position));
-					object.rotateY(
-						(Math.PI / 2) * (object.userData.shoeId === 'left' ? 1 : -1),
-					);
+					object.rotateY(getSurfaceRotationY(object.userData.shoeId));
 					object.userData.quatTarget = object.quaternion.clone();
 					object.quaternion.copy(quat);
 				}

@@ -4,6 +4,7 @@
 	"scripts": {
 		"build": "webpack",
 		"serve": "webpack serve",
+		"test": "node --test test/*.test.mjs",
 		"lint": "eslint ./src",
 		"format": "prettier --write ./src/**/*"
 	},
